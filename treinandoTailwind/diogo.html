@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        vast:['Vast Shadow', 'cursive']
+                    },
+                    colors: {
+                        primary: '#f2dae7'
+                    },
+                    keyframes: {
+                        sino_kf: {
+                            '0%, 100%': {
+                                transform: 'rotate(-10deg)'
+                            },
+                            '50%': {
+                                transform: 'rotate(10deg)'
+                            },
+                        }
+                    },
+                    animation: {
+                        sino: 'sino_kf 0.31s ease-in-out infinite'
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <section class="flex items-center bg-gradient-to-r from-purple-400 to-gray-700  h-[12vw] m-auto my-10 w-[42vw] rounded-r-lg">
+            <div>
+                <img class="h-[12vw] w-[15vw]" src="https://img.freepik.com/free-photo/website-development-developer-working-program-codes-office-computer-program-programmer-workplace-programming-code-software-source-code_372999-389.jpg?w=1380" alt="codigo json">
+            </div>
+            <div class="flex flex-col px-3 gap-y-1">
+                <p class="font-black text-xl font-vast text-primary">DiogoHSP</p>
+                <p class="text-4x1 font-vast">Desenvolvedor Full-Stack</p>
+                <ui class="flex list-none gap-3 text-sm ">
+                    <li class="hover:text-white duration-200 hover:animate-sino"><a href="#" class="">Github</a></li>
+                    <li class="hover:text-white duration-200 hover:animate-sino""><a href="#" class="">Linkedin</a></li>
+                    <li class="hover:text-white duration-200 hover:animate-sino""><a href="#" class="">Instagram</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>

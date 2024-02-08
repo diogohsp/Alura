@@ -1,0 +1,117 @@
+.banner {
+    display: grid;
+    gap: 1rem;
+}
+
+.banner img:nth-child(1){
+    grid-column: 1/3;
+}
+
+.banner img:nth-child(4){
+    grid-column: 2/3;
+    grid-row: 2/4;
+}
+
+.eventos__item{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto repeat(2,1fr) auto;
+    grid-template-areas: 
+    "imagem imagem"
+    "nome nome"
+    "data data"
+    "local botao";
+}
+
+.agenda__item{
+    display: grid;
+
+    grid-template-areas:
+    "imagem imagem"
+    "info info"
+    "botao botao";
+}
+
+.agenda__item img{
+    grid-area: imagem;
+}
+
+.agenda__item agenda__informacoes{
+    grid-area: info;
+}
+
+.agenda__item agenda__atracao{
+    grid-area: botao;
+}
+
+.eventos__item img{
+    grid-area: imagem;
+}
+
+.eventos__item h3{
+    grid-area: nome;
+    align-self: center;
+}
+
+.eventos__item h4{
+    grid-area: data;
+}
+
+.eventos__item h5{  
+    grid-area: local;
+    align-self: end;
+}
+
+.eventos__item button{
+    grid-area: botao;
+}
+
+@media (min-width: 720px) {
+
+    .banner{
+        grid-template-columns: calc(50% 0 9.75rem) auto auto;
+        column-gap: 1.5rem;
+    }
+
+    .banner img:nth-child(1){
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+
+    .banner img:nth-child(4){
+        grid-column: 3/4;
+        grid-row: 1/3;
+    }
+}
+
+@media(min-width: 1440px){
+    
+    .categorias{
+        display: grid;
+        grid-template-areas:
+        "titulo titulo"
+        "categorias tituloDestaques"
+        "categorias destaques";
+
+        column-gap: 1.5rem;
+        row-gap: 1rem;
+    }
+
+    .categorias h2{
+        grid-area: titulo;
+    }
+    
+    .categorias ul{
+        grid-area: categorias;
+    }
+
+    .categorias h3 {
+        grid-area: tituloDestaques;
+    }
+    
+    .categorias img {
+        grid-area: destaques;
+    }
+
+}
+

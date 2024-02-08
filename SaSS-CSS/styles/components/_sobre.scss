@@ -1,0 +1,13 @@
+@import '../abstract/variaveis';
+
+#sobre {
+    display: flex;
+    align-items: center;
+    .sobre__texto{
+        align-self: center;
+        font-family: $fonte;
+        font-size: $tamanho-do-texto / 2.3;
+        font-weight: 300;
+    }
+
+}

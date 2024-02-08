@@ -1,0 +1,7 @@
+--------SOLID--------
+
+- S ingle resposibility principle -> Cada modulo,classe,metodo só tem que ser responsavel por 1 entidade
+- O Open/Closed Principle -> Aberta para ser expandida, porém fechada para ser modificada. Seja possivel adicionar funcionalidades em uma classe mas não alterar um metodo de uma classe que ja está em funcionamento.
+- L iskov Substitution Principle -> Um metodo que tem na SubClasse é um metodo que tem na SuperClasse mesmo que utilizado de maneira diferente.
+- I nterface Segregation Principle -> Clientes não devem ser forçados a depender de interfaces que eles não usam. Não impor a implementação de uma coisa que não vai ser necessaria.
+- D ependency Inversion Principle -> modulos que estão um nivel a cima na hierarquia de classe não podem depender de algo que está abaixo deles, a classePai não pode depender da classeFilho. Esconder como determinada função funcionada, quem usa as funções não tem que saber como ela funciona internamente
