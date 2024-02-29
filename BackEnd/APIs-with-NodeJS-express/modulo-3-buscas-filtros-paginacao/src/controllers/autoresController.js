@@ -4,7 +4,12 @@ import { autores } from "../models/index.js";
 class AutorController {
   static listarAutores = async (req, res, next) => {
     try {
+<<<<<<< HEAD
       const autoresResultado = autores.find();
+=======
+      
+      const autoresResultado = await autores.find();
+>>>>>>> origin/develop
 
       req.resultado = autoresResultado;
 
