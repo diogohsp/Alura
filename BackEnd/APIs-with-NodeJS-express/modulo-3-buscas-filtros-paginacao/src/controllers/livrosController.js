@@ -3,8 +3,12 @@ import { autores, livros } from "../models/index.js";
 
 class LivroController {
   static listarLivros = async (req, res, next) => {
+    const { limite = 5, pagina = 1 } = req.body
     try {
-      const livrosResultado = await livros.find().populate("autor").exec();
+      const livrosResultado = await livros.find()
+      .skip((pagina - 1) * limite)
+      .limit(limite)
+      .populate("autor").exec();
       res.status(200).json(livrosResultado);
     } catch (erro) {
       next(erro);
